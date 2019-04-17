@@ -1,12 +1,9 @@
 const pkg = require('./package')
 
-
 module.exports = {
   mode: 'universal',
+  srcDir: 'src',
 
-  /*
-  ** Headers of the page
-  */
   head: {
     title: pkg.name,
     meta: [
@@ -14,47 +11,24 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
 
-  /*
-  ** Global CSS
-  */
-  css: [
-    'element-ui/lib/theme-chalk/index.css'
-  ],
+  css: ['element-ui/lib/theme-chalk/index.css'],
 
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/element-ui'
-  ],
+  plugins: ['@/plugins/element-ui'],
 
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    '@nuxtjs/pwa',
-  ],
+  modules: ['@nuxtjs/pwa', '~/modules/sample'],
 
-  /*
-  ** Build configuration
-  */
+  router: {
+    middleware: ['auth']
+  },
+
   build: {
     transpile: [/^element-ui/],
-    
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+
+    extend(config, ctx) {}
   }
 }
