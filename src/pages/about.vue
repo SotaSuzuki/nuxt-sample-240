@@ -26,6 +26,9 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import { mapMutations } from 'vuex'
+import libIndex from '~/lib'
+
+console.log(libIndex.name)
 
 export default {
   components: {

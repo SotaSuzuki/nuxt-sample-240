@@ -7,6 +7,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    sample: {
+      type: Date
+    }
+  }
+}
+</script>
+
 <style>
 .VueToNuxtLogo {
   display: inline-block;

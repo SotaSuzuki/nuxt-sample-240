@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo />
+      <logo :sample="new Date()" />
       <h1 class="title">
         nuxt-sample-262
       </h1>
