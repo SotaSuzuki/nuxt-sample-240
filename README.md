@@ -1,10 +1,10 @@
-# nuxt-sample-262
+# nuxt-sample-240
 
 > My wicked Nuxt.js project
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
